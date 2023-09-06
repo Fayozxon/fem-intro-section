@@ -5,11 +5,10 @@
     --clr-grey: hsl(0, 0%, 41%);
     --clr-white: hsl(0, 0%, 98%);
 
-    --clr-bg-neutral: var(--clr-white);
-    --clr-dark: var(--clr-black);
-    --clr-txt-neutral: var(--clr-grey);
-
-    /* font sizes */
+    /* font sizes 14px 18px 80px */
+    --fs-xs: 0.875rem;
+    --fs-md: 1.125rem;
+    --fs-xxl: 5rem;
 }
 
 /* core */
@@ -18,13 +17,143 @@
     padding: 0;
 }
 
+*:focus {
+    outline: 2px dashed var(--clr-black);
+    outline-offset: 5px;
+}
+
 body {
     min-height: 100vh;
     font-family: Epilogue, sans-serif;
-    color: var(--clr-txt-neutral);
+    font-weight: 500;
+    color: var(--clr-grey);
+    background: var(--clr-white);
 }
 
 .container {
     max-width: 1180px;
     margin: 0 auto;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    padding: 20px 33px;
+    border: 1px solid var(--clr-black);
+    border-radius: 15px;
+    transition: all 200ms ease;
+    background: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.btn:hover {
+    background: var(--clr-white);
+    color: var(--clr-black);
+}
+
+.btn-inline {
+    padding: 12px 22px;
+    background: transparent;
+    border: none;
+    color: var(--clr-grey);
+}
+
+.btn-stroke {
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--clr-grey);
+    border-color: var(--clr-grey);
+}
+
+.btn-stroke:hover {
+    color: var(--clr-black);
+    border-color: var(--clr-black);
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    font-size: var(--fs-xs);
+}
+
+.header .container {
+    max-width: 1376px;
+    padding: 0 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 84px 1fr 1fr;
+    gap: 63px;
+    align-items: center;
+}
+
+.header__brand img {
+    width: 100%;
+    margin-bottom: -8px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__nav--item {
+    transition: color 200ms;
+}
+
+.header__nav--item:hover {
+    color: var(--clr-black);
+}
+
+.header__cta {
+    justify-self: end;
+}
+
+/* main-section */
+.main-section {
+    padding-top: 130px;
+    font-size: var(--fs-md);
+}
+
+.main-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-section__info {
+    padding-left: 40px;
+    padding-top: 105px;
+}
+
+.main-section__info--title {
+    font-size: var(--fs-xxl);
+    font-weight: 700;
+    line-height: 0.96;
+    color: var(--clr-black);
+}
+
+.main-section__info--text {
+    max-width: 425px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    line-height: 1.53;
+}
+
+.main-section__info--clients {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 105px;
+}
+
+.main-section__img {
+    background-image: url('../images/image-hero-desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
