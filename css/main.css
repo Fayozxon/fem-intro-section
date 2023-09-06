@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --clr-black: hsl(0, 0%, 8%);
+    --clr-grey: hsl(0, 0%, 41%);
+    --clr-white: hsl(0, 0%, 98%);
+
+    --clr-bg-neutral: var(--clr-white);
+    --clr-dark: var(--clr-black);
+    --clr-txt-neutral: var(--clr-grey);
+
+    /* font sizes */
+}
+
+/* core */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Epilogue, sans-serif;
+    color: var(--clr-txt-neutral);
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
