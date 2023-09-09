@@ -18,8 +18,35 @@
         <img src="./images/logo.svg" alt="Company Logo">
       </a>
       <nav class="header__nav">
-        <a href="#" class="header__nav--item">Features <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
-        <a href="#" class="header__nav--item">Company <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
+        <div class="header__nav--dropdown">
+          <a href="#" class="header__nav--item">Features <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">
+              <img src="./images/icon-todo.svg" aria-hidden="true" alt="">
+              Todo list
+            </a>
+            <a href="#" class="dropdown-item">
+              <img src="./images/icon-calendar.svg" aria-hidden="true" alt="">
+              Calendar
+            </a>
+            <a href="#" class="dropdown-item">
+              <img src="./images/icon-reminders.svg" aria-hidden="true" alt="">
+              Reminders
+            </a>
+            <a href="#" class="dropdown-item">
+              <img src="./images/icon-planning.svg" aria-hidden="true" alt="">
+              Planning
+            </a>
+          </div>
+        </div>
+        <div class="header__nav--dropdown">
+          <a href="#" class="header__nav--item">Company <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
+          <div class="dropdown-menu no-icon">
+            <a href="#" class="dropdown-item">History</a>
+            <a href="#" class="dropdown-item">Our team</a>
+            <a href="#" class="dropdown-item">Blog</a>
+          </div>
+        </div>
         <a href="#" class="header__nav--item">Careers</a>
         <a href="#" class="header__nav--item">About</a>
       </nav>
