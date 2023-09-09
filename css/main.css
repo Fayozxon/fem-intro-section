@@ -82,6 +82,7 @@ body {
     padding: 20px 0;
     font-size: var(--fs-xs);
     background: var(--clr-white);
+    z-index: 10;
 }
 
 .header .overlay {
@@ -94,6 +95,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: 200ms;
+    z-index: 11;
 }
 
 .header.show .overlay {
@@ -102,10 +104,27 @@ body {
 
 .header__hamburger {
     position: fixed;
-    right: 30px;
+    right: 20px;
     top: 15px;
     width: 30px;
     height: 30px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.header__hamburger .close {
+    display: none;
+}
+
+.header.show .header__hamburger .menu {
+    display: none;
+}
+
+.header.show .header__hamburger .close {
+    display: inline-block;
 }
 
 .header .container {
@@ -122,6 +141,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 12;
 }
 
 .header__brand img {
@@ -156,6 +176,7 @@ body {
 .header__nav--dropdown {
     position: relative;
     padding: 30px 0;
+    z-index: 15;
 }
 
 .header__nav--dropdown .dropdown-menu {
@@ -172,6 +193,7 @@ body {
     transition: all 200ms;
     opacity: 0;
     pointer-events: none;
+    z-index: 20;
 }
 
 .header__nav--dropdown:hover .dropdown-menu {
@@ -267,17 +289,30 @@ body {
         right: 0;
         bottom: 0;
         left: 30%;
-        background: var(--clr-white);
+        padding: 30px;
+        padding-top: 80px;
         flex-direction: column;
+        align-items: stretch;
         justify-content: start;
         transform: translateX(100%);
+        background: var(--clr-white);
         transition: 200ms;
+    }
+
+    .header__hamburger {
+        display: inline-block;
     }
 
     .header__nav {
         flex-direction: column;
         justify-content: start;
         align-items: start;
+        gap: 20px;
+        font-size: var(--fs-md);
+    }
+
+    .header__nav *:focus {
+        outline: none;
     }
 
     .header__cta {
@@ -285,6 +320,29 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .header__nav--dropdown {
+        padding: 0;
+    }
+
+    .header__nav--dropdown a:nth-child(1) {
+        padding-top: 20px;
+    }
+
+    .header__nav--dropdown .dropdown-menu {
+        position: static;
+        height: 0;
+        pointer-events: all;
+        background: none;
+        box-shadow: none;
+        transition: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    .header__nav--dropdown:hover .dropdown-menu {
+        height: 100%;
     }
 
     /* main section */
