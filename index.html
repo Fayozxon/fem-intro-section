@@ -12,48 +12,52 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
+      <div class="overlay"></div>
       <a href="/" class="header__brand" title="Snap Logo">
         <img src="./images/logo.svg" alt="Company Logo">
       </a>
-      <nav class="header__nav">
-        <div class="header__nav--dropdown">
-          <a href="#" class="header__nav--item">Features <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">
-              <img src="./images/icon-todo.svg" aria-hidden="true" alt="">
-              Todo list
-            </a>
-            <a href="#" class="dropdown-item">
-              <img src="./images/icon-calendar.svg" aria-hidden="true" alt="">
-              Calendar
-            </a>
-            <a href="#" class="dropdown-item">
-              <img src="./images/icon-reminders.svg" aria-hidden="true" alt="">
-              Reminders
-            </a>
-            <a href="#" class="dropdown-item">
-              <img src="./images/icon-planning.svg" aria-hidden="true" alt="">
-              Planning
-            </a>
+      <div class="header__nav-cta">
+        <nav class="header__nav">
+          <div class="header__nav--dropdown">
+            <a href="#" class="header__nav--item">Features <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">
+                <img src="./images/icon-todo.svg" aria-hidden="true" alt="">
+                Todo list
+              </a>
+              <a href="#" class="dropdown-item">
+                <img src="./images/icon-calendar.svg" aria-hidden="true" alt="">
+                Calendar
+              </a>
+              <a href="#" class="dropdown-item">
+                <img src="./images/icon-reminders.svg" aria-hidden="true" alt="">
+                Reminders
+              </a>
+              <a href="#" class="dropdown-item">
+                <img src="./images/icon-planning.svg" aria-hidden="true" alt="">
+                Planning
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="header__nav--dropdown">
-          <a href="#" class="header__nav--item">Company <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
-          <div class="dropdown-menu no-icon">
-            <a href="#" class="dropdown-item">History</a>
-            <a href="#" class="dropdown-item">Our team</a>
-            <a href="#" class="dropdown-item">Blog</a>
+          <div class="header__nav--dropdown">
+            <a href="#" class="header__nav--item">Company <img src="./images/icon-arrow-down.svg" aria-hidden="true" alt=""></a>
+            <div class="dropdown-menu no-icon">
+              <a href="#" class="dropdown-item">History</a>
+              <a href="#" class="dropdown-item">Our team</a>
+              <a href="#" class="dropdown-item">Blog</a>
+            </div>
           </div>
+          <a href="#" class="header__nav--item">Careers</a>
+          <a href="#" class="header__nav--item">About</a>
+        </nav>
+        <div class="header__cta">
+          <a href="#" class="btn btn-inline">Login</a>
+          <a href="#" class="btn btn-stroke">Register</a>
         </div>
-        <a href="#" class="header__nav--item">Careers</a>
-        <a href="#" class="header__nav--item">About</a>
-      </nav>
-      <div class="header__cta">
-        <a href="#" class="btn btn-inline">Login</a>
-        <a href="#" class="btn btn-stroke">Register</a>
       </div>
+      <button type="button" class="header__hamburger" id="hamburgerBtn">X</button>
     </div>
   </header>
 
